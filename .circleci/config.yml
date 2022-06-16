@@ -22,7 +22,8 @@ jobs:
             - "npm-packages"
       - run: npm i
       - run: npm run test
-      - run : npm audit fix  
+      - run : npm audit fix --force 
+      - run : npm fund    
        
   analyze:
     docker:
