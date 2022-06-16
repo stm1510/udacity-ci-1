@@ -22,6 +22,7 @@ jobs:
             - "npm-packages"
       - run: npm i
       - run: npm run test
+      - run : npm audit fix  
        
   analyze:
     docker:
@@ -31,8 +32,8 @@ jobs:
       - restore_cache:
           keys:
             - "npm-packages"
-      - run: npm audit
-      - run : npm audit fix 
+      - run:  npm audit
+       
 
 workflows:
   my_workflow:
